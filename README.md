@@ -9,11 +9,17 @@ This code relies only on python3. Please install python3 (free) on your system (
 
 ## How to use the script
 
-First we need images. Place your organoid blob images in the folder ``images``. Ensure that each image is as you would expect and they all share the same area per pixel (and ideally size).
+First we need images. Place your organoid blob images in the folder ``images``. Ensure that each image is as you would expect and they all share the same area per pixel (and ideally size). The code works on all the images present in the ``images`` folder, so ensure you only put in the images you want to analyse. The file names can be whatever, the code preserves these.
 
 An image could look like:
 
 ![organoid](organoid_example.png)
+
+By running the program (right clicking ``Example_workflow.py`` then running with python3 or running on the command line as ``python3 Example_workflow.py``) you will first see that the program filters the images (Gaussian or Median filter e.g.). The filtered images are shown in ``filtered_images`` folder.
+
+Our example image above, when filtered looks like
+
+![filtered organoid](filtered_organoid_example.png)
 
 
 ## Example_workflow.py
