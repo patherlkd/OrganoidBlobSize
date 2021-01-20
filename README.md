@@ -13,7 +13,7 @@ First we need images. Place your organoid blob images in the folder ``images``. 
 
 An image could look like:
 
-![organoid](images/NM_20200807_MoN_hMO_B1_Mosaic_hNESC312-317_p7_d15_1.tif)
+![organoid](organoid_example.png)
 
 
 ## Example_workflow.py
