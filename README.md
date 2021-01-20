@@ -21,6 +21,9 @@ Our example image above, when filtered looks like
 
 ![filtered organoid](filtered_organoid_example.png)
 
+The program then attempts to find a circle that fits the blob. Such a circle could look like
+
+
 
 ## Example_workflow.py
 
