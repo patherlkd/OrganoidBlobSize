@@ -23,7 +23,9 @@ Our example image above, when filtered looks like
 
 The program then attempts to find a circle that fits the blob. Such a circle could look like
 
+![circled_organoid](circled_organoid_example.png)
 
+The program computes the area of the circle which, with suitable blob criteria, should well approximate the area of the blob. The area is saved in units specified from the area per pixel variable in ``Example_workflow.py``. The areas are saved in the ``data`` folder.
 
 ## Example_workflow.py
 
