@@ -1,5 +1,9 @@
 # OrganoidBlobSize
-A python toolkit to generate simple workflows to extract features in images generated using AFM e.g.
+A python toolkit to automatically compute the size (area) of an organoid center. Code was written by Dr. Luke Davis.
+
+>All images provided were produced by *Nathasia Muwanigwa* (https://wwwen.uni.lu/lcsb/people/nathasia_muwanigwa) and are **not** to be used for commercial >purposes and permission must be granted by Nathasia Muwanigwa before any image can be reproduced elsewhere.
+
+The rest of the repository (that isn't an image) is under CC-BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0/.
 
 (This was done as an extra-curricular venture, **this works as is**. Please do play around with the blob criteria to further "refine" the areas.)
 
