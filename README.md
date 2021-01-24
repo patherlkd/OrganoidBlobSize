@@ -9,7 +9,18 @@ The rest of the repository (that isn't an image) is under CC-BY-SA 2.0 https://c
 
 ## System Requirements
 
-This code relies only on python3. Please install python3 (free) on your system (Windows, Linux, Mac). The code was tested on Ubuntu linux 18 LTS.
+This code relies only on python3 (version 3.6.9). Please install python3 (free) on your system (Windows, Linux, Mac). The code was tested on Ubuntu linux 18 LTS.
+
+Python3 packages to install:
+
+``
+alphashape 1.1.0 https://pypi.org/project/alphashape/
+Numpy 1.19.3 https://pypi.org/project/numpy/
+Matplotlib 3.3.2 https://pypi.org/project/matplotlib/
+Pillow 8.0.0 https://pypi.org/project/Pillow/
+opencv-python (cv2) 4.4.0.44 https://pypi.org/project/opencv-python/
+``
+For windows users this article might help: https://solarianprogrammer.com/2016/09/17/install-opencv-3-with-python-3-on-windows/.
 
 ## How to use the script
 
