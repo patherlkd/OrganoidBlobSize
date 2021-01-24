@@ -12,7 +12,7 @@ from os.path import isfile, join
 from pathlib import Path
 import cv2
 
-folder = "TasiaImages2/"
+folder = "images/"
 imagefiles = [f for f in listdir(folder) if isfile(join(folder, f))]
 
 basenames = [Path(name).stem for name in imagefiles] 
@@ -31,15 +31,24 @@ for i in imagefiles:
 #images[-1].show()
 
 length_of_pixel = 1.86 # micro meters
-#length_of_pixel = 0.93 # microns
 
 area_per_pixel = length_of_pixel**2 # micro meters^2
 number_of_pixels = (np_im_arrays[-1].shape[0]*np_im_arrays[-1].shape[1])
 
+# ## Plot the frequency of intensity values (0-255) from the last image to find range for the blob
+# comment out the next lines (until plt.show()) once you are happy with choice of In_min and In_max
+
+histoIn = ImLD.histogram_intensity(np_im_arrays[-1])
+plt.figure(figsize=[10,8])
+plt.bar(histoIn[1][:-1], histoIn[0], width = 0.5, color='#0504aa',alpha=0.7)
+plt.xlabel('Color intensity values',fontsize=15)
+plt.ylabel('Frequency',fontsize=15)
+plt.show()
+
 # ## write down the approx min and max intensity/color values for the objects
 
-In_min = 0
-In_max = 50
+In_min = 0 # RGB black
+In_max = 50 # Typical upper value 
 
 print("Saving filtered images in folder: filtered_images/")
 
