@@ -21,14 +21,17 @@ Python3 packages to install:
 
 ### For windows (10) users follow these instructions for installing:
 
-- Install python3 from the Microsoft Store for free. If you open the command prompt and type python3 (then enter) it should take you to the microsoft store.
-- Install pip3 from the Microsoft Store for free. Again try to type pip3 on the command prompt and it should take you to the microsoft store.
+- Install python3 from the Microsoft Store for free. If you open the command prompt and type `python3` (then the return key) it should take you to the microsoft store.
+- Install pip3 from the Microsoft Store for free. Again try to type `pip3` on the command prompt and it should take you to the microsoft store.
 
 Once you can run python3 and pip3 from the command prompt you are ready to install the relevant python packages.
 
 - Open the command prompt
-- Install Numpy by typing `pip3 install numpy`
-- Install 
+- Install Numpy by typing `pip3 install numpy` and then press the return key.
+- Install alphashapes by typing `pip3 install alphashape` and then press the return key.
+- Install matplotlib by typing `pip3 install matplotlib` and then press the return key.
+- Install Pillow by typing `pip3 install Pillow` and then press the return key.
+- Install opencv-python (cv2) `pip3 install opencv-python` and then press the return key.
 
 
 ## How to use the script
