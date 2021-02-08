@@ -13,14 +13,23 @@ This code relies only on python3 (version 3.6.9). Please install python3 (free) 
 
 Python3 packages to install:
 
-
 * alphashape 1.1.0 https://pypi.org/project/alphashape/
 * Numpy 1.19.3 https://pypi.org/project/numpy/
 * Matplotlib 3.3.2 https://pypi.org/project/matplotlib/
 * Pillow 8.0.0 https://pypi.org/project/Pillow/
 * opencv-python (cv2) 4.4.0.44 https://pypi.org/project/opencv-python/
 
-For windows users this article might help: https://solarianprogrammer.com/2016/09/17/install-opencv-3-with-python-3-on-windows/.
+### For windows (10) users follow these instructions for installing:
+
+- Install python3 from the Microsoft Store for free. If you open the command prompt and type python3 (then enter) it should take you to the microsoft store.
+- Install pip3 from the Microsoft Store for free. Again try to type pip3 on the command prompt and it should take you to the microsoft store.
+
+Once you can run python3 and pip3 from the command prompt you are ready to install the relevant python packages.
+
+- Open the command prompt
+- Install Numpy by typing `pip3 install numpy`
+- Install 
+
 
 ## How to use the script
 
