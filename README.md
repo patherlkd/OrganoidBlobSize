@@ -9,7 +9,7 @@ The rest of the repository (that isn't an image) is under CC-BY-SA 2.0 https://c
 
 ## System Requirements
 
-This code relies only on python3 (version 3.6.9). Please install python3 (free) on your system (Windows, Linux, Mac). The code was tested on Ubuntu linux 18 LTS.
+This code relies only on python3 (version 3.6.9). Please install python3 (free) on your system (Windows, Linux, Mac). The code was tested on Ubuntu linux 18 LTS and Windows 10.
 
 Python3 packages to install:
 
