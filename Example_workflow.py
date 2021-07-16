@@ -137,7 +137,7 @@ for cnt in range(len(np_im_arrays)):
 			f.write(str(dia)+'\n')
  
 	print("[] Saving image (with a red circle around organoid blob): "+"blob_images/"+"blob_"+basenames[cnt]+'.png')
-	cv2.imwrite("blob_images/"+"blob_"+basenames[cnt]+'.png', im_with_keypoints)
+	cv2.imwrite("blob_image/"+"blob_"+basenames[cnt]+'.png', im_with_keypoints)
 
 
 	#cv2.waitKey(0)
