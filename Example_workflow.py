@@ -46,16 +46,17 @@ plt.ylabel('Frequency',fontsize=15)
 plt.show()
 
 # ## write down the approx min and max intensity/color values for the objects
-
+############ CHANGE THESE VALUES TO CHANGE THE INTENSITY CRITERIA FOR BLOB DETECTION #################################
 In_min = 0 # RGB black
-In_max = 50 # Typical upper value 
+In_max = 50 # Typical upper value (whiter)
+######################################################################################################################
 
 print("Saving filtered images in folder: filtered_images/")
 
 cnt = 0
 
 for np_array in np_im_arrays:
-	channel_array = ImLD.grab_intensity_band_binary(np_array,In_min,In_max)
+	channel_array = ImLD.grab_intensity_band(np_array,In_min,In_max)
 
 	chanimage = Image.fromarray(channel_array).convert('RGB')
 	print("[] Saving image (threshold filtered): "+"filtered_images/"+'filtered_'+basenames[cnt]+'.png')
@@ -96,6 +97,10 @@ params.maxInertiaRatio = 1.0
 
 print("Detecting organoid blob...")
 
+# Create arrays to store areas and diameters for csv output
+all_areas = []
+all_diameters = []
+
 for cnt in range(len(np_im_arrays)):
 
 	# Read image
@@ -129,18 +134,28 @@ for cnt in range(len(np_im_arrays)):
 	print("[] Computing area for "+basenames[cnt])
 	with open("data/"+"area_"+basenames[cnt]+'.txt','w') as f:
 		for area in areas:
+			all_areas.append(area)
 			f.write(str(area)+'\n')
 	
 	print("[] Computing diameter for "+basenames[cnt])
 	with open("data/"+"diameter_"+basenames[cnt]+'.txt','w') as f:
 		for dia in dias:
+			all_diameters.append(dia)
 			f.write(str(dia)+'\n')
- 
+
+
 	print("[] Saving image (with a red circle around organoid blob): "+"blob_images/"+"blob_"+basenames[cnt]+'.png')
-	cv2.imwrite("blob_image/"+"blob_"+basenames[cnt]+'.png', im_with_keypoints)
+	cv2.imwrite("blob_images/"+"blob_"+basenames[cnt]+'.png', im_with_keypoints)
 
 
 	#cv2.waitKey(0)
+
+print("[] Saving all data for all images in data/"+"areas_and_diameters.csv")
+
+with open("data/areas_and_diameters.csv",'w') as f:
+	f.write('label,area,diameter\n')
+	for cnt in range(len(np_im_arrays)):
+		f.write(basenames[cnt]+','+str(all_areas[cnt]) + ',' + str(all_diameters[cnt]) + '\n')
 
 print("Done.")
 
